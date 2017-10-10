@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Anne Richardson Design</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<script src="js/jquery.min.js"></script>
+
+<script language="JavaScript" type="text/javascript">
+function displayAnswer(divID)
+{
+if(document.getElementById(divID).style.display == 'block')
+{
+var closeAnswer = true;
+}
+document.getElementById('answer1').style.display = 'none';
+document.getElementById('answer2').style.display = 'none';
+document.getElementById('answer3').style.display = 'none';
+document.getElementById('answer4').style.display = 'none';
+if(!closeAnswer)
+{
+document.getElementById(divID).style.display = '';
+}
+return false;
+}
+
+</script>
+</head>
+
+<body>
+<div class="main_outr">
+<div class="auto_con">
+<div class="header_main">
+<div class="logo_con"><a href="index.html"><img src="images/img_logo.png" alt=""></a></div>
+<div class="cart_con"><div class="cart_pic"><img src="images/img_cart.png" alt=""></div><div class="cart_txt"> Items (0)</div></div>
+</div>
+
+<!--NAVIGATION-->
+<div class="nav_con">
+<ul>
+<li><a href="clothing.html">Clothing</a></li>
+<li><a href="jewelery.html">Jewelry</a></li>
+<!--<li><a href="shoes_accessories.html">Shoes &amp; Accessories</a></li>-->
+<li><a href="accessories.html" id="nav_active">Accessories</a></li>
+<li><a href="women.html">Women</a></li>
+<li><a href="sale.html">Sale</a></li>
+<li><a href="contact_us.html">Contact Us</a></li>
+</ul>
+</div>
+
+<!--CONETENT PART-->
+<div class="clothing_main_out">
+<div class="clothing_main_left">
+<h2>Accessories</h2>
+<ul>
+<li><a href="javascript:;" class="anchor side_active" onClick="displayAnswer('answer1');">T-Shirts</a></li>
+<li><a href="javascript:;" class="anchor" onClick="displayAnswer('answer2');">Denim</a></li>
+<li><a href="javascript:;" class="anchor" onClick="displayAnswer('answer3');">Suits</a></li>
+<li><a href="javascript:;" class="anchor" onClick="displayAnswer('answer4');">Sunglassess</a></li>
+</ul>
+</div>
+<div class="clothing_main_rgt" id="answer1"><img src="images/img_men_pic01.jpg" alt=""></div>
+<div class="clothing_main_rgt" id="answer2" style="display:none"><img src="images/img_men_pic02.jpg" alt=""></div>
+<div class="clothing_main_rgt" id="answer3" style="display:none"><img src="images/img_men_pic03.jpg" alt=""></div>
+<div class="clothing_main_rgt" id="answer4" style="display:none"><img src="images/img_men_pic04.jpg" alt=""></div>
+</div>
+<!--CONETENT PART END-->
+</div>
+
+<div class="copyright_out">
+<div class="auto_con">
+<div class="copyright_inn">© 2014-2015 annerichardsondesign.com. All Rights Reserved.</div>
+</div>
+</div>
+</div>
+
+<script>
+  
+$(function(){
+$('.clothing_main_left li a').click(function(){
+$('.clothing_main_left li a').removeClass('side_active'); // remove the class from the currently selected
+$(this).addClass('side_active'); // add the class to the newly clicked link
+if(!$(this).addClass('side_active')) {
+} else {
+$(this).addClass('side_active');
+$(this).next().stop(true,true).removeClass('side_active');
+}
+});
+
+});
+
+</script>
+</body>
+</html>

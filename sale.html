@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Anne Richardson Design</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<div class="main_outr">
+<div class="auto_con">
+<div class="header_main">
+<div class="logo_con"><a href="index.html"><img src="images/img_logo.png" alt=""></a></div>
+<div class="cart_con"><div class="cart_pic"><img src="images/img_cart.png" alt=""></div><div class="cart_txt"> Items (0)</div></div>
+</div>
+
+<!--NAVIGATION-->
+<div class="nav_con">
+<ul>
+<li><a href="clothing.html">Clothing</a></li>
+<li><a href="jewelery.html">Jewelry</a></li>
+<!--<li><a href="shoes_accessories.html">Shoes &amp; Accessories</a></li>-->
+<li><a href="accessories.html">Accessories</a></li>
+<li><a href="women.html">Women</a></li>
+<li><a href="sale.html" id="nav_active">Sale</a></li>
+<li><a href="contact_us.html">Contact Us</a></li>
+</ul>
+</div>
+
+<!--CONETENT PART-->
+<div class="clothing_main_out">
+<div class="clothing_main_left">
+<h2>Sale</h2>
+<ul>
+<li><a href="clothing.html">Clothing</a></li>
+<li><a href="jewelery.html">Jewelry</a></li>
+<!--<li><a href="shoes_accessories.html">Shoes &amp; Accessories</a></li>-->
+<li><a href="accessories.html">Accessories</a></li>
+<li><a href="women.html">Women</a></li>
+<li><a href="contact_us.html">Contact Us</a></li>
+</ul>
+</div>
+<div class="clothing_main_rgt"><img src="images/img_sale.jpg" alt=""></div>
+</div>
+<!--CONETENT PART END-->
+</div>
+
+<div class="copyright_out">
+<div class="auto_con">
+<div class="copyright_inn">© 2014-2015 annerichardsondesign.com. All Rights Reserved.</div>
+</div>
+</div>
+</div>
+
+<script>
+  
+$(function(){
+$('.clothing_main_left li a').click(function(){
+$('.clothing_main_left li a').removeClass('side_active'); // remove the class from the currently selected
+$(this).addClass('side_active'); // add the class to the newly clicked link
+if(!$(this).addClass('side_active')) {
+} else {
+$(this).addClass('side_active');
+$(this).next().stop(true,true).removeClass('side_active');
+}
+});
+
+});
+
+</script>
+</body>
+</html>
